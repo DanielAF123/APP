@@ -9,7 +9,7 @@ const Trabajadores = require('./schemas/trabajadores');
 //Opciones
 app.set('port', process.env.PORT || 3000);
 //Funciones
-const Objeto = require('./helpers/Trabajador');
+const {anadirTrabajador,eliminarTrabajador,actualizarTrabajador,buscarTrabajadoresNombre} = require('./database/DBTrabajador');
 //Variables globales
 
 //Rutas
@@ -25,8 +25,8 @@ app.listen(app.get('port'), () =>{
 //mensaje
 
 var trabajador = new Trabajadores()
-    trabajador._id = 4
-    trabajador.Nombre = "AAA"
+    trabajador._id = 7
+    trabajador.Nombre = "Daniel"
     console.log(trabajador);
-Objeto.anadirTrabajador(trabajador);
-Objeto.buscarTrabajadoresNombre("Daniel");
+anadirTrabajador(trabajador);
+buscarTrabajadoresNombre("Daniel");
