@@ -24,10 +24,10 @@
     }
 
     //Actualizar trabajador
-    async function actualizarTrabajador(id,Nombre){
-    Trabajadores.findById(id)
+    async function actualizarTrabajador(trabajadorVista){
+    Trabajadores.findById(trabajadorVista._id)
         .then(function(){
-            trabajador.updateOne({_id: id},{ Nombre: "AAAAA"})
+            trabajador.updateOne({_id: trabajadorVista_id},{ Nombre: trabajadorVista.Nombre, Apellidos: trabajadorVista.Apellidos, FechaNac: trabajadorVista.FechaNac, Ocupacion: trabajador.Ocupacion, Sueldo: trabajadorVista.Sueldo})
         })
         .then(function(){
             console.log("Usuario actualizado");

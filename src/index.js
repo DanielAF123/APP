@@ -14,19 +14,9 @@ const {anadirTrabajador,eliminarTrabajador,actualizarTrabajador,buscarTrabajador
 
 //Rutas
 app.use(require('./routes/index'));
-//app.use(require('./routes/users'));
 //Archivos estaticos
-//app.use(express.static('public'));
 app.use('/', express.static(__dirname + '/public'));
 //Inico servidor
 app.listen(app.get('port'), () =>{
     console.log('Server on port '+ app.get('port'))
 });
-//mensaje
-
-var trabajador = new Trabajadores()
-    trabajador._id = 7
-    trabajador.Nombre = "Daniel"
-    console.log(trabajador);
-anadirTrabajador(trabajador);
-buscarTrabajadoresNombre("Daniel");
